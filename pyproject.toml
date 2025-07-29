@@ -1,0 +1,11 @@
+[project]
+name = "tushare-data"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "ibapi>=9.81.1.post1",
+    "numpy>=2.3.2",
+    "pandas>=2.3.1",
+]
