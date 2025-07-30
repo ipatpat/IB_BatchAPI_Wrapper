@@ -1,0 +1,58 @@
+2025-07-30 10:26:33 | nasdaq_fetcher | INFO     | _setup_handlers:81 | 🚀 日志系统启动 - 主日志: nasdaq_20250730_102633.log, 失败日志: nasdaq_failures_20250730_102633.log
+2025-07-30 10:26:42 | nasdaq_fetcher | INFO     | fetch_list_stocks:222 | 🚀 开始获取股票列表数据: 3 只股票
+2025-07-30 10:26:42 | nasdaq_fetcher | INFO     | fetch_list_stocks:241 | 🧹 清理后股票列表: 3 只（跳过 0 只退市股票）
+2025-07-30 10:26:42 | nasdaq_fetcher | INFO     | fetch_list_stocks:263 | 📊 进度 1/3: 正在获取 ANSS
+2025-07-30 10:26:42 | nasdaq_fetcher | INFO     | stock_start:94 | 🔄 开始获取 ANSS 历史数据 (从 2015-01-01)
+2025-07-30 10:26:42 | nasdaq_fetcher | INFO     | system_info:145 | 🔧 将请求 11 Y 的数据后进行筛选
+2025-07-30 10:26:42 | nasdaq_fetcher | INFO     | get_stock_data:109 | 正在连接到IBKR TWS...
+2025-07-30 10:26:42 | nasdaq_fetcher | INFO     | system_info:145 | 🔧 IBKR连接信息 2104: 市场数据场连接正常:usfarm.nj
+2025-07-30 10:26:42 | nasdaq_fetcher | INFO     | system_info:145 | 🔧 IBKR连接信息 2104: 市场数据场连接正常:hfarm
+2025-07-30 10:26:42 | nasdaq_fetcher | INFO     | system_info:145 | 🔧 IBKR连接信息 2104: 市场数据场连接正常:usfuture
+2025-07-30 10:26:42 | nasdaq_fetcher | INFO     | system_info:145 | 🔧 IBKR连接信息 2104: 市场数据场连接正常:cashfarm
+2025-07-30 10:26:42 | nasdaq_fetcher | INFO     | system_info:145 | 🔧 IBKR连接信息 2104: 市场数据场连接正常:usfarm
+2025-07-30 10:26:42 | nasdaq_fetcher | INFO     | system_info:145 | 🔧 IBKR连接信息 2106: 历史市场数据场连接正常:euhmds
+2025-07-30 10:26:42 | nasdaq_fetcher | INFO     | system_info:145 | 🔧 IBKR连接信息 2106: 历史市场数据场连接正常:apachmds
+2025-07-30 10:26:42 | nasdaq_fetcher | INFO     | system_info:145 | 🔧 IBKR连接信息 2106: 历史市场数据场连接正常:fundfarm
+2025-07-30 10:26:42 | nasdaq_fetcher | INFO     | system_info:145 | 🔧 IBKR连接信息 2106: 历史市场数据场连接正常:ushmds
+2025-07-30 10:26:42 | nasdaq_fetcher | INFO     | system_info:145 | 🔧 IBKR连接信息 2158: Sec-def数据场连接正常:secdefhk
+2025-07-30 10:26:45 | nasdaq_fetcher | INFO     | get_stock_data:126 | 请求数据: 持续时间=11 Y
+2025-07-30 10:26:45 | nasdaq_fetcher | ERROR    | api_failure:120 | 🚫 API调用失败: IBKR API - 错误码 200: 未找到该请求的证券定义
+2025-07-30 10:26:45 | nasdaq_fetcher | ERROR    | stock_failure:106 | ❌ ANSS: 获取失败 - 错误 200: 未找到该请求的证券定义
+2025-07-30 10:26:47 | nasdaq_fetcher | WARNING  | fetch_list_stocks:308 | ❌ ANSS: 未获取到数据
+2025-07-30 10:26:50 | nasdaq_fetcher | INFO     | fetch_list_stocks:263 | 📊 进度 2/3: 正在获取 LIN
+2025-07-30 10:26:50 | nasdaq_fetcher | INFO     | stock_start:94 | 🔄 开始获取 LIN 历史数据 (从 2015-01-01)
+2025-07-30 10:26:50 | nasdaq_fetcher | INFO     | system_info:145 | 🔧 将请求 11 Y 的数据后进行筛选
+2025-07-30 10:26:50 | nasdaq_fetcher | INFO     | get_stock_data:109 | 正在连接到IBKR TWS...
+2025-07-30 10:26:50 | nasdaq_fetcher | INFO     | system_info:145 | 🔧 IBKR连接信息 2104: 市场数据场连接正常:usfarm.nj
+2025-07-30 10:26:50 | nasdaq_fetcher | INFO     | system_info:145 | 🔧 IBKR连接信息 2104: 市场数据场连接正常:hfarm
+2025-07-30 10:26:50 | nasdaq_fetcher | INFO     | system_info:145 | 🔧 IBKR连接信息 2104: 市场数据场连接正常:usfuture
+2025-07-30 10:26:50 | nasdaq_fetcher | INFO     | system_info:145 | 🔧 IBKR连接信息 2104: 市场数据场连接正常:cashfarm
+2025-07-30 10:26:50 | nasdaq_fetcher | INFO     | system_info:145 | 🔧 IBKR连接信息 2104: 市场数据场连接正常:usfarm
+2025-07-30 10:26:50 | nasdaq_fetcher | INFO     | system_info:145 | 🔧 IBKR连接信息 2106: 历史市场数据场连接正常:euhmds
+2025-07-30 10:26:50 | nasdaq_fetcher | INFO     | system_info:145 | 🔧 IBKR连接信息 2106: 历史市场数据场连接正常:apachmds
+2025-07-30 10:26:50 | nasdaq_fetcher | INFO     | system_info:145 | 🔧 IBKR连接信息 2106: 历史市场数据场连接正常:fundfarm
+2025-07-30 10:26:50 | nasdaq_fetcher | INFO     | system_info:145 | 🔧 IBKR连接信息 2106: 历史市场数据场连接正常:ushmds
+2025-07-30 10:26:50 | nasdaq_fetcher | INFO     | system_info:145 | 🔧 IBKR连接信息 2158: Sec-def数据场连接正常:secdefhk
+2025-07-30 10:26:53 | nasdaq_fetcher | INFO     | get_stock_data:126 | 请求数据: 持续时间=11 Y
+2025-07-30 10:26:55 | nasdaq_fetcher | ERROR    | api_failure:120 | 🚫 API调用失败: IBKR API - 错误码 162: 历史市场数据服务错误消息:No historical market data for 1514/STK@NYSENBBO Last 1d
+2025-07-30 10:26:56 | nasdaq_fetcher | ERROR    | stock_failure:106 | ❌ LIN: 获取失败 - 错误 162: 历史市场数据服务错误消息:No historical market data for 1514/STK@NYSENBBO Last 1d
+2025-07-30 10:26:58 | nasdaq_fetcher | WARNING  | fetch_list_stocks:308 | ❌ LIN: 未获取到数据
+2025-07-30 10:27:01 | nasdaq_fetcher | INFO     | fetch_list_stocks:263 | 📊 进度 3/3: 正在获取 MNST
+2025-07-30 10:27:01 | nasdaq_fetcher | INFO     | stock_start:94 | 🔄 开始获取 MNST 历史数据 (从 2015-01-01)
+2025-07-30 10:27:01 | nasdaq_fetcher | INFO     | system_info:145 | 🔧 将请求 11 Y 的数据后进行筛选
+2025-07-30 10:27:01 | nasdaq_fetcher | INFO     | get_stock_data:109 | 正在连接到IBKR TWS...
+2025-07-30 10:27:01 | nasdaq_fetcher | INFO     | system_info:145 | 🔧 IBKR连接信息 2104: 市场数据场连接正常:usfarm.nj
+2025-07-30 10:27:01 | nasdaq_fetcher | INFO     | system_info:145 | 🔧 IBKR连接信息 2104: 市场数据场连接正常:hfarm
+2025-07-30 10:27:01 | nasdaq_fetcher | INFO     | system_info:145 | 🔧 IBKR连接信息 2104: 市场数据场连接正常:usfuture
+2025-07-30 10:27:01 | nasdaq_fetcher | INFO     | system_info:145 | 🔧 IBKR连接信息 2104: 市场数据场连接正常:cashfarm
+2025-07-30 10:27:01 | nasdaq_fetcher | INFO     | system_info:145 | 🔧 IBKR连接信息 2104: 市场数据场连接正常:usfarm
+2025-07-30 10:27:01 | nasdaq_fetcher | INFO     | system_info:145 | 🔧 IBKR连接信息 2106: 历史市场数据场连接正常:euhmds
+2025-07-30 10:27:01 | nasdaq_fetcher | INFO     | system_info:145 | 🔧 IBKR连接信息 2106: 历史市场数据场连接正常:apachmds
+2025-07-30 10:27:01 | nasdaq_fetcher | INFO     | system_info:145 | 🔧 IBKR连接信息 2106: 历史市场数据场连接正常:fundfarm
+2025-07-30 10:27:01 | nasdaq_fetcher | INFO     | system_info:145 | 🔧 IBKR连接信息 2106: 历史市场数据场连接正常:ushmds
+2025-07-30 10:27:01 | nasdaq_fetcher | INFO     | system_info:145 | 🔧 IBKR连接信息 2158: Sec-def数据场连接正常:secdefhk
+2025-07-30 10:27:04 | nasdaq_fetcher | INFO     | get_stock_data:126 | 请求数据: 持续时间=11 Y
+2025-07-30 10:27:05 | nasdaq_fetcher | ERROR    | api_failure:120 | 🚫 API调用失败: IBKR API - 错误码 162: 历史市场数据服务错误消息:No historical market data for 1279/STK@NASDAQBBO Last 1d
+2025-07-30 10:27:05 | nasdaq_fetcher | ERROR    | stock_failure:106 | ❌ MNST: 获取失败 - 错误 162: 历史市场数据服务错误消息:No historical market data for 1279/STK@NASDAQBBO Last 1d
+2025-07-30 10:27:07 | nasdaq_fetcher | WARNING  | fetch_list_stocks:308 | ❌ MNST: 未获取到数据
+2025-07-30 10:27:07 | nasdaq_fetcher | INFO     | fetch_list_stocks:343 | 📋 股票列表处理完成: 成功 0, 失败 3

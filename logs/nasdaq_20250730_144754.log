@@ -1,0 +1,8 @@
+2025-07-30 14:47:54 | akshare_fetcher | INFO     | _setup_handlers:81 | 🚀 日志系统启动 - 主日志: nasdaq_20250730_144754.log, 失败日志: nasdaq_failures_20250730_144754.log
+2025-07-30 14:47:54 | akshare_fetcher | INFO     | get_us_stock_data_offline:296 | 🧪 离线模式: 生成 AAPL 示例数据
+2025-07-30 14:47:54 | akshare_fetcher | INFO     | stock_success:99 | ✅ AAPL: 成功获取 673 条数据
+2025-07-30 14:47:54 | akshare_fetcher | INFO     | data_summary:150 | 📄 AAPL 数据摘要:
+2025-07-30 14:47:54 | akshare_fetcher | INFO     | data_summary:151 |   📅 时间范围: 2023-01-02 到 2025-07-30
+2025-07-30 14:47:54 | akshare_fetcher | INFO     | data_summary:152 |   📊 数据条数: 673
+2025-07-30 14:47:54 | akshare_fetcher | INFO     | data_summary:153 |   💾 文件大小: 0.0 KB
+2025-07-30 14:47:54 | akshare_fetcher | INFO     | save_us_stock_data:411 | 💾 AAPL: 已保存到 data/akshare_demo/AAPL.csv (30.6 KB)

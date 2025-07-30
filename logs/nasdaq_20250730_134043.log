@@ -1,0 +1,20 @@
+2025-07-30 13:40:43 | nasdaq_fetcher | INFO     | _setup_handlers:81 | 🚀 日志系统启动 - 主日志: nasdaq_20250730_134043.log, 失败日志: nasdaq_failures_20250730_134043.log
+2025-07-30 13:40:43 | nasdaq_fetcher | INFO     | fetch_list_stocks:201 | 🚀 开始获取股票列表数据: 1 只股票
+2025-07-30 13:40:43 | nasdaq_fetcher | INFO     | fetch_list_stocks:220 | 🧹 清理后股票列表: 1 只（跳过 0 只退市股票）
+2025-07-30 13:40:43 | nasdaq_fetcher | INFO     | fetch_list_stocks:242 | 📊 进度 1/1: 正在获取 FB
+2025-07-30 13:40:43 | nasdaq_fetcher | INFO     | stock_start:94 | 🔄 开始获取 FB 历史数据 (从 2008-01-01)
+2025-07-30 13:40:43 | nasdaq_fetcher | INFO     | system_info:145 | 🔧 将请求 18 Y 的数据后进行筛选
+2025-07-30 13:40:43 | nasdaq_fetcher | INFO     | get_stock_data:111 | 正在连接到IBKR TWS...
+2025-07-30 13:40:46 | nasdaq_fetcher | INFO     | get_stock_data:128 | 请求数据: 持续时间=18 Y
+2025-07-30 13:40:48 | nasdaq_fetcher | ERROR    | api_failure:120 | 🚫 API调用失败: IBKR API - 错误码 2176: 警告: 您的API版本不支持小数股交易数量。请至少升级到版本163。已将144.41调整为144
+2025-07-30 13:40:48 | nasdaq_fetcher | INFO     | historicalDataEnd:52 | 历史数据接收完成! 共接收 23 条数据
+2025-07-30 13:40:48 | nasdaq_fetcher | INFO     | system_info:145 | 🔧 成功获取 23 条原始数据
+2025-07-30 13:40:48 | nasdaq_fetcher | INFO     | stock_success:99 | ✅ FB: 成功获取 23 条数据
+2025-07-30 13:40:48 | nasdaq_fetcher | INFO     | data_summary:150 | 📄 FB 数据摘要:
+2025-07-30 13:40:48 | nasdaq_fetcher | INFO     | data_summary:151 |   📅 时间范围: 2025-06-26 到 2025-07-29
+2025-07-30 13:40:48 | nasdaq_fetcher | INFO     | data_summary:152 |   📊 数据条数: 23
+2025-07-30 13:40:48 | nasdaq_fetcher | INFO     | data_summary:153 |   💾 文件大小: 0.0 KB
+2025-07-30 13:40:50 | nasdaq_fetcher | INFO     | fetch_list_stocks:279 | ✅ FB: 成功获取 23 条数据，已保存到 data/failed_stocks/FB_data.csv
+2025-07-30 13:40:50 | nasdaq_fetcher | INFO     | fetch_list_stocks:280 |    📅 2025-06-26 到 2025-07-29
+2025-07-30 13:40:50 | nasdaq_fetcher | INFO     | fetch_list_stocks:281 |    📈 总收益: +1.6%
+2025-07-30 13:40:50 | nasdaq_fetcher | INFO     | fetch_list_stocks:322 | 📋 股票列表处理完成: 成功 1, 失败 0

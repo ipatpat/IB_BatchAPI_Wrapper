@@ -1,0 +1,149 @@
+2025-07-30 14:43:25 | FAILURE | ❌ 获取美股列表失败: HTTPSConnectionPool(host='72.push2.eastmoney.com', port=443): Max retries exceeded with url: /api/qt/clist/get?pn=100&pz=100&po=1&np=1&ut=bd1d9ddb04089700cf9c27f6f7426281&fltt=2&invt=2&fid=f12&fs=m%3A105%2Cm%3A106%2Cm%3A107&fields=f1%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6%2Cf7%2Cf8%2Cf9%2Cf10%2Cf12%2Cf13%2Cf14%2Cf15%2Cf16%2Cf17%2Cf18%2Cf20%2Cf21%2Cf23%2Cf24%2Cf25%2Cf26%2Cf22%2Cf33%2Cf11%2Cf62%2Cf128%2Cf136%2Cf115%2Cf152 (Caused by ProxyError('Unable to connect to proxy', RemoteDisconnected('Remote end closed connection without response')))
+  位置: /Users/Pat/Python_material/TUSHARE_DATA/src/ak_fetcher.py:83
+  函数: get_us_stock_symbols
+--------------------------------------------------------------------------------
+2025-07-30 14:43:25 | FAILURE | ❌ AAPL: 获取失败 - AKShare获取异常: 'NoneType' object is not subscriptable
+  位置: /Users/Pat/Python_material/TUSHARE_DATA/src/logger_config.py:106
+  函数: stock_failure
+--------------------------------------------------------------------------------
+2025-07-30 14:43:25 | FAILURE | 股票 AAPL 获取失败详情: AKShare获取异常: 'NoneType' object is not subscriptable
+  位置: /Users/Pat/Python_material/TUSHARE_DATA/src/logger_config.py:110
+  函数: stock_failure
+--------------------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/Pat/Python_material/TUSHARE_DATA/src/ak_fetcher.py", line 133, in get_us_stock_data
+    df = ak.stock_us_hist(symbol=symbol, start_date=start_date, end_date=end_date, adjust="")
+  File "/Users/Pat/Python_material/TUSHARE_DATA/.venv/lib/python3.13/site-packages/akshare/stock_feature/stock_hist_em.py", line 1723, in stock_us_hist
+    if not data_json["data"]["klines"]:
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^
+TypeError: 'NoneType' object is not subscriptable
+2025-07-30 14:43:25 | FAILURE | ❌ AAPL: 获取失败 - AKShare获取异常: 'NoneType' object is not subscriptable
+  位置: /Users/Pat/Python_material/TUSHARE_DATA/src/logger_config.py:106
+  函数: stock_failure
+--------------------------------------------------------------------------------
+2025-07-30 14:43:25 | FAILURE | 股票 AAPL 获取失败详情: AKShare获取异常: 'NoneType' object is not subscriptable
+  位置: /Users/Pat/Python_material/TUSHARE_DATA/src/logger_config.py:110
+  函数: stock_failure
+--------------------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/Pat/Python_material/TUSHARE_DATA/src/ak_fetcher.py", line 133, in get_us_stock_data
+    df = ak.stock_us_hist(symbol=symbol, start_date=start_date, end_date=end_date, adjust="")
+  File "/Users/Pat/Python_material/TUSHARE_DATA/.venv/lib/python3.13/site-packages/akshare/stock_feature/stock_hist_em.py", line 1723, in stock_us_hist
+    if not data_json["data"]["klines"]:
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^
+TypeError: 'NoneType' object is not subscriptable
+2025-07-30 14:43:25 | FAILURE | ❌ AAPL: 获取失败 - 返回空数据
+  位置: /Users/Pat/Python_material/TUSHARE_DATA/src/logger_config.py:106
+  函数: stock_failure
+--------------------------------------------------------------------------------
+2025-07-30 14:43:26 | FAILURE | ❌ MSFT: 获取失败 - AKShare获取异常: 'NoneType' object is not subscriptable
+  位置: /Users/Pat/Python_material/TUSHARE_DATA/src/logger_config.py:106
+  函数: stock_failure
+--------------------------------------------------------------------------------
+2025-07-30 14:43:26 | FAILURE | 股票 MSFT 获取失败详情: AKShare获取异常: 'NoneType' object is not subscriptable
+  位置: /Users/Pat/Python_material/TUSHARE_DATA/src/logger_config.py:110
+  函数: stock_failure
+--------------------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/Pat/Python_material/TUSHARE_DATA/src/ak_fetcher.py", line 133, in get_us_stock_data
+    df = ak.stock_us_hist(symbol=symbol, start_date=start_date, end_date=end_date, adjust="")
+  File "/Users/Pat/Python_material/TUSHARE_DATA/.venv/lib/python3.13/site-packages/akshare/stock_feature/stock_hist_em.py", line 1723, in stock_us_hist
+    if not data_json["data"]["klines"]:
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^
+TypeError: 'NoneType' object is not subscriptable
+2025-07-30 14:43:26 | FAILURE | ❌ MSFT: 获取失败 - 返回空数据
+  位置: /Users/Pat/Python_material/TUSHARE_DATA/src/logger_config.py:106
+  函数: stock_failure
+--------------------------------------------------------------------------------
+2025-07-30 14:43:27 | FAILURE | ❌ GOOGL: 获取失败 - AKShare获取异常: 'NoneType' object is not subscriptable
+  位置: /Users/Pat/Python_material/TUSHARE_DATA/src/logger_config.py:106
+  函数: stock_failure
+--------------------------------------------------------------------------------
+2025-07-30 14:43:27 | FAILURE | 股票 GOOGL 获取失败详情: AKShare获取异常: 'NoneType' object is not subscriptable
+  位置: /Users/Pat/Python_material/TUSHARE_DATA/src/logger_config.py:110
+  函数: stock_failure
+--------------------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/Pat/Python_material/TUSHARE_DATA/src/ak_fetcher.py", line 133, in get_us_stock_data
+    df = ak.stock_us_hist(symbol=symbol, start_date=start_date, end_date=end_date, adjust="")
+  File "/Users/Pat/Python_material/TUSHARE_DATA/.venv/lib/python3.13/site-packages/akshare/stock_feature/stock_hist_em.py", line 1723, in stock_us_hist
+    if not data_json["data"]["klines"]:
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^
+TypeError: 'NoneType' object is not subscriptable
+2025-07-30 14:43:27 | FAILURE | ❌ GOOGL: 获取失败 - 返回空数据
+  位置: /Users/Pat/Python_material/TUSHARE_DATA/src/logger_config.py:106
+  函数: stock_failure
+--------------------------------------------------------------------------------
+2025-07-30 14:43:30 | FAILURE | ❌ AAPL: 获取失败 - 获取股票信息失败: HTTPSConnectionPool(host='72.push2.eastmoney.com', port=443): Max retries exceeded with url: /api/qt/clist/get?pn=1&pz=100&po=1&np=1&ut=bd1d9ddb04089700cf9c27f6f7426281&fltt=2&invt=2&fid=f12&fs=m%3A105%2Cm%3A106%2Cm%3A107&fields=f1%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6%2Cf7%2Cf8%2Cf9%2Cf10%2Cf12%2Cf13%2Cf14%2Cf15%2Cf16%2Cf17%2Cf18%2Cf20%2Cf21%2Cf23%2Cf24%2Cf25%2Cf26%2Cf22%2Cf33%2Cf11%2Cf62%2Cf128%2Cf136%2Cf115%2Cf152 (Caused by ProxyError('Unable to connect to proxy', RemoteDisconnected('Remote end closed connection without response')))
+  位置: /Users/Pat/Python_material/TUSHARE_DATA/src/logger_config.py:106
+  函数: stock_failure
+--------------------------------------------------------------------------------
+2025-07-30 14:43:30 | FAILURE | 股票 AAPL 获取失败详情: 获取股票信息失败: HTTPSConnectionPool(host='72.push2.eastmoney.com', port=443): Max retries exceeded with url: /api/qt/clist/get?pn=1&pz=100&po=1&np=1&ut=bd1d9ddb04089700cf9c27f6f7426281&fltt=2&invt=2&fid=f12&fs=m%3A105%2Cm%3A106%2Cm%3A107&fields=f1%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6%2Cf7%2Cf8%2Cf9%2Cf10%2Cf12%2Cf13%2Cf14%2Cf15%2Cf16%2Cf17%2Cf18%2Cf20%2Cf21%2Cf23%2Cf24%2Cf25%2Cf26%2Cf22%2Cf33%2Cf11%2Cf62%2Cf128%2Cf136%2Cf115%2Cf152 (Caused by ProxyError('Unable to connect to proxy', RemoteDisconnected('Remote end closed connection without response')))
+  位置: /Users/Pat/Python_material/TUSHARE_DATA/src/logger_config.py:110
+  函数: stock_failure
+--------------------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/Pat/Python_material/TUSHARE_DATA/.venv/lib/python3.13/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+        conn,
+    ...<10 lines>...
+        **response_kw,
+    )
+  File "/Users/Pat/Python_material/TUSHARE_DATA/.venv/lib/python3.13/site-packages/urllib3/connectionpool.py", line 534, in _make_request
+    response = conn.getresponse()
+  File "/Users/Pat/Python_material/TUSHARE_DATA/.venv/lib/python3.13/site-packages/urllib3/connection.py", line 565, in getresponse
+    httplib_response = super().getresponse()
+  File "/opt/homebrew/Cellar/python@3.13/3.13.2/Frameworks/Python.framework/Versions/3.13/lib/python3.13/http/client.py", line 1430, in getresponse
+    response.begin()
+    ~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.2/Frameworks/Python.framework/Versions/3.13/lib/python3.13/http/client.py", line 331, in begin
+    version, status, reason = self._read_status()
+                              ~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.2/Frameworks/Python.framework/Versions/3.13/lib/python3.13/http/client.py", line 300, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+                             " response")
+http.client.RemoteDisconnected: Remote end closed connection without response
+
+The above exception was the direct cause of the following exception:
+
+urllib3.exceptions.ProxyError: ('Unable to connect to proxy', RemoteDisconnected('Remote end closed connection without response'))
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/Pat/Python_material/TUSHARE_DATA/.venv/lib/python3.13/site-packages/requests/adapters.py", line 667, in send
+    resp = conn.urlopen(
+        method=request.method,
+    ...<9 lines>...
+        chunked=chunked,
+    )
+  File "/Users/Pat/Python_material/TUSHARE_DATA/.venv/lib/python3.13/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+        method, url, error=new_e, _pool=self, _stacktrace=sys.exc_info()[2]
+    )
+  File "/Users/Pat/Python_material/TUSHARE_DATA/.venv/lib/python3.13/site-packages/urllib3/util/retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='72.push2.eastmoney.com', port=443): Max retries exceeded with url: /api/qt/clist/get?pn=1&pz=100&po=1&np=1&ut=bd1d9ddb04089700cf9c27f6f7426281&fltt=2&invt=2&fid=f12&fs=m%3A105%2Cm%3A106%2Cm%3A107&fields=f1%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6%2Cf7%2Cf8%2Cf9%2Cf10%2Cf12%2Cf13%2Cf14%2Cf15%2Cf16%2Cf17%2Cf18%2Cf20%2Cf21%2Cf23%2Cf24%2Cf25%2Cf26%2Cf22%2Cf33%2Cf11%2Cf62%2Cf128%2Cf136%2Cf115%2Cf152 (Caused by ProxyError('Unable to connect to proxy', RemoteDisconnected('Remote end closed connection without response')))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/Pat/Python_material/TUSHARE_DATA/src/ak_fetcher.py", line 330, in get_us_stock_info
+    df = ak.stock_us_spot_em()
+  File "/Users/Pat/Python_material/TUSHARE_DATA/.venv/lib/python3.13/site-packages/akshare/stock_feature/stock_hist_em.py", line 1612, in stock_us_spot_em
+    temp_df = fetch_paginated_data(url, params)
+  File "/Users/Pat/Python_material/TUSHARE_DATA/.venv/lib/python3.13/site-packages/akshare/utils/func.py", line 32, in fetch_paginated_data
+    r = requests.get(url, params=params, timeout=timeout)
+  File "/Users/Pat/Python_material/TUSHARE_DATA/.venv/lib/python3.13/site-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "/Users/Pat/Python_material/TUSHARE_DATA/.venv/lib/python3.13/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Pat/Python_material/TUSHARE_DATA/.venv/lib/python3.13/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/Users/Pat/Python_material/TUSHARE_DATA/.venv/lib/python3.13/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "/Users/Pat/Python_material/TUSHARE_DATA/.venv/lib/python3.13/site-packages/requests/adapters.py", line 694, in send
+    raise ProxyError(e, request=request)
+requests.exceptions.ProxyError: HTTPSConnectionPool(host='72.push2.eastmoney.com', port=443): Max retries exceeded with url: /api/qt/clist/get?pn=1&pz=100&po=1&np=1&ut=bd1d9ddb04089700cf9c27f6f7426281&fltt=2&invt=2&fid=f12&fs=m%3A105%2Cm%3A106%2Cm%3A107&fields=f1%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6%2Cf7%2Cf8%2Cf9%2Cf10%2Cf12%2Cf13%2Cf14%2Cf15%2Cf16%2Cf17%2Cf18%2Cf20%2Cf21%2Cf23%2Cf24%2Cf25%2Cf26%2Cf22%2Cf33%2Cf11%2Cf62%2Cf128%2Cf136%2Cf115%2Cf152 (Caused by ProxyError('Unable to connect to proxy', RemoteDisconnected('Remote end closed connection without response')))

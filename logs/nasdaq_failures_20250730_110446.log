@@ -1,0 +1,48 @@
+2025-07-30 11:04:49 | FAILURE | 🚫 API调用失败: IBKR API - 错误码 200: 未找到该请求的证券定义
+  位置: /Users/Pat/Python_material/TUSHARE_DATA/src/logger_config.py:120
+  函数: api_failure
+--------------------------------------------------------------------------------
+2025-07-30 11:04:50 | FAILURE | ❌ ANSS: 获取失败 - 错误 200: 未找到该请求的证券定义
+  位置: /Users/Pat/Python_material/TUSHARE_DATA/src/logger_config.py:106
+  函数: stock_failure
+--------------------------------------------------------------------------------
+2025-07-30 11:05:00 | FAILURE | 🚫 API调用失败: IBKR API - 错误码 162: 历史市场数据服务错误消息:No historical market data for 1514/STK@NYSENBBO Last 1d
+  位置: /Users/Pat/Python_material/TUSHARE_DATA/src/logger_config.py:120
+  函数: api_failure
+--------------------------------------------------------------------------------
+2025-07-30 11:05:00 | FAILURE | ❌ LIN: 获取失败 - 错误 162: 历史市场数据服务错误消息:No historical market data for 1514/STK@NYSENBBO Last 1d
+  位置: /Users/Pat/Python_material/TUSHARE_DATA/src/logger_config.py:106
+  函数: stock_failure
+--------------------------------------------------------------------------------
+2025-07-30 11:05:09 | FAILURE | 🚫 API调用失败: IBKR API - 错误码 162: 历史市场数据服务错误消息:No historical market data for 1279/STK@NASDAQBBO Last 1d
+  位置: /Users/Pat/Python_material/TUSHARE_DATA/src/logger_config.py:120
+  函数: api_failure
+--------------------------------------------------------------------------------
+2025-07-30 11:05:09 | FAILURE | ❌ MNST: 获取失败 - 错误 162: 历史市场数据服务错误消息:No historical market data for 1279/STK@NASDAQBBO Last 1d
+  位置: /Users/Pat/Python_material/TUSHARE_DATA/src/logger_config.py:106
+  函数: stock_failure
+--------------------------------------------------------------------------------
+2025-07-30 11:05:18 | FAILURE | 🚫 API调用失败: IBKR API - 错误码 200: 未找到该请求的证券定义
+  位置: /Users/Pat/Python_material/TUSHARE_DATA/src/logger_config.py:120
+  函数: api_failure
+--------------------------------------------------------------------------------
+2025-07-30 11:05:18 | FAILURE | ❌ SPLK: 获取失败 - 错误 200: 未找到该请求的证券定义
+  位置: /Users/Pat/Python_material/TUSHARE_DATA/src/logger_config.py:106
+  函数: stock_failure
+--------------------------------------------------------------------------------
+2025-07-30 11:05:26 | FAILURE | 🚫 API调用失败: IBKR API - 错误码 200: 未找到该请求的证券定义
+  位置: /Users/Pat/Python_material/TUSHARE_DATA/src/logger_config.py:120
+  函数: api_failure
+--------------------------------------------------------------------------------
+2025-07-30 11:05:27 | FAILURE | ❌ SGEN: 获取失败 - 错误 200: 未找到该请求的证券定义
+  位置: /Users/Pat/Python_material/TUSHARE_DATA/src/logger_config.py:106
+  函数: stock_failure
+--------------------------------------------------------------------------------
+2025-07-30 11:05:35 | FAILURE | 🚫 API调用失败: IBKR API - 错误码 200: 未找到该请求的证券定义
+  位置: /Users/Pat/Python_material/TUSHARE_DATA/src/logger_config.py:120
+  函数: api_failure
+--------------------------------------------------------------------------------
+2025-07-30 11:05:35 | FAILURE | ❌ ATVI: 获取失败 - 错误 200: 未找到该请求的证券定义
+  位置: /Users/Pat/Python_material/TUSHARE_DATA/src/logger_config.py:106
+  函数: stock_failure
+--------------------------------------------------------------------------------

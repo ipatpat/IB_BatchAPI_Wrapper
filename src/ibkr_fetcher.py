@@ -23,7 +23,9 @@ class StockDataFetcher(EWrapper, EClient):
     def error(self, reqId, errorCode, errorString, advancedOrderRejectJson=""):
         # 这些是正常的连接信息，不是错误
         if errorCode in [2104, 2106, 2158, 2174]:
-            logger.system_info(f"IBKR连接信息 {errorCode}: {errorString}")
+            # 不输出正常信息
+            # logger.system_info(f"IBKR连接信息 {errorCode}: {errorString}")
+            pass
         else:
             logger.api_failure("IBKR API", errorCode, errorString)
             self.error_message = f"错误 {errorCode}: {errorString}"
@@ -56,6 +58,7 @@ def create_stock_contract(symbol):
     contract.symbol = symbol
     contract.secType = "STK"
     contract.exchange = "SMART"
+    contract.primaryExchange = "NASDAQ"
     contract.currency = "USD"
     return contract
 

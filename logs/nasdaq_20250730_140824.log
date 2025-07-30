@@ -1,0 +1,22 @@
+2025-07-30 14:08:24 | nasdaq_fetcher | INFO     | _setup_handlers:81 | 🚀 日志系统启动 - 主日志: nasdaq_20250730_140824.log, 失败日志: nasdaq_failures_20250730_140824.log
+2025-07-30 14:08:24 | nasdaq_fetcher | INFO     | fetch_list_stocks:208 | 🚀 开始获取股票列表数据: 1 只股票
+2025-07-30 14:08:24 | nasdaq_fetcher | INFO     | fetch_list_stocks:227 | 🧹 清理后股票列表: 1 只（跳过 0 只退市股票）
+2025-07-30 14:08:24 | nasdaq_fetcher | INFO     | fetch_list_stocks:250 | 📊 进度 1/1: 正在处理 TSLA
+2025-07-30 14:08:24 | nasdaq_fetcher | INFO     | fetch_and_save_stock_data:78 | 开始获取 TSLA 历史数据...
+2025-07-30 14:08:24 | nasdaq_fetcher | INFO     | stock_start:94 | 🔄 开始获取 TSLA 历史数据 (从 2023-01-01)
+2025-07-30 14:08:24 | nasdaq_fetcher | INFO     | system_info:145 | 🔧 将请求 3 Y 的数据后进行筛选
+2025-07-30 14:08:24 | nasdaq_fetcher | INFO     | get_stock_data:111 | 正在连接到IBKR TWS...
+2025-07-30 14:08:27 | nasdaq_fetcher | INFO     | get_stock_data:128 | 请求数据: 持续时间=3 Y
+2025-07-30 14:08:28 | nasdaq_fetcher | ERROR    | api_failure:120 | 🚫 API调用失败: IBKR API - 错误码 2176: 警告: 您的API版本不支持小数股交易数量。请至少升级到版本163。已将677702.37调整为677702
+2025-07-30 14:08:28 | nasdaq_fetcher | INFO     | historicalDataEnd:52 | 历史数据接收完成! 共接收 751 条数据
+2025-07-30 14:08:29 | nasdaq_fetcher | INFO     | system_info:145 | 🔧 成功获取 751 条原始数据
+2025-07-30 14:08:29 | nasdaq_fetcher | INFO     | stock_success:99 | ✅ TSLA: 成功获取 644 条数据
+2025-07-30 14:08:29 | nasdaq_fetcher | INFO     | data_summary:150 | 📄 TSLA 数据摘要:
+2025-07-30 14:08:29 | nasdaq_fetcher | INFO     | data_summary:151 |   📅 时间范围: 2023-01-03 到 2025-07-29
+2025-07-30 14:08:29 | nasdaq_fetcher | INFO     | data_summary:152 |   📊 数据条数: 644
+2025-07-30 14:08:29 | nasdaq_fetcher | INFO     | data_summary:153 |   💾 文件大小: 0.0 KB
+2025-07-30 14:08:31 | nasdaq_fetcher | INFO     | fetch_and_save_stock_data:101 | ✅ TSLA: 成功保存 644 条数据
+2025-07-30 14:08:31 | nasdaq_fetcher | INFO     | fetch_and_save_stock_data:102 |    📅 2023-01-03 到 2025-07-29
+2025-07-30 14:08:31 | nasdaq_fetcher | INFO     | fetch_and_save_stock_data:103 |    📈 总收益: +197.1%
+2025-07-30 14:08:31 | nasdaq_fetcher | INFO     | fetch_and_save_stock_data:104 |    ⏱️  用时: 6.6秒
+2025-07-30 14:08:31 | nasdaq_fetcher | INFO     | fetch_list_stocks:313 | 📋 股票列表处理完成: 成功 1, 失败 0

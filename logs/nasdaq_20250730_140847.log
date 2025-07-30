@@ -1,0 +1,104 @@
+2025-07-30 14:08:47 | nasdaq_fetcher | INFO     | _setup_handlers:81 | 🚀 日志系统启动 - 主日志: nasdaq_20250730_140847.log, 失败日志: nasdaq_failures_20250730_140847.log
+2025-07-30 14:08:47 | nasdaq_fetcher | INFO     | load_nasdaq100_data:63 | 成功加载 387 个 NASDAQ 100 股票信息
+2025-07-30 14:08:47 | nasdaq_fetcher | INFO     | fetch_and_save_stock_data:78 | 开始获取 AAPL 历史数据...
+2025-07-30 14:08:47 | nasdaq_fetcher | INFO     | stock_start:94 | 🔄 开始获取 AAPL 历史数据 (从 2024-01-01)
+2025-07-30 14:08:47 | nasdaq_fetcher | INFO     | system_info:145 | 🔧 将请求 2 Y 的数据后进行筛选
+2025-07-30 14:08:47 | nasdaq_fetcher | INFO     | get_stock_data:111 | 正在连接到IBKR TWS...
+2025-07-30 14:08:50 | nasdaq_fetcher | INFO     | get_stock_data:128 | 请求数据: 持续时间=2 Y
+2025-07-30 14:08:51 | nasdaq_fetcher | ERROR    | api_failure:120 | 🚫 API调用失败: IBKR API - 错误码 2176: 警告: 您的API版本不支持小数股交易数量。请至少升级到版本163。已将243753.06调整为243753
+2025-07-30 14:08:51 | nasdaq_fetcher | INFO     | historicalDataEnd:52 | 历史数据接收完成! 共接收 501 条数据
+2025-07-30 14:08:51 | nasdaq_fetcher | INFO     | system_info:145 | 🔧 成功获取 501 条原始数据
+2025-07-30 14:08:51 | nasdaq_fetcher | INFO     | stock_success:99 | ✅ AAPL: 成功获取 394 条数据
+2025-07-30 14:08:51 | nasdaq_fetcher | INFO     | data_summary:150 | 📄 AAPL 数据摘要:
+2025-07-30 14:08:51 | nasdaq_fetcher | INFO     | data_summary:151 |   📅 时间范围: 2024-01-02 到 2025-07-29
+2025-07-30 14:08:51 | nasdaq_fetcher | INFO     | data_summary:152 |   📊 数据条数: 394
+2025-07-30 14:08:51 | nasdaq_fetcher | INFO     | data_summary:153 |   💾 文件大小: 0.0 KB
+2025-07-30 14:08:53 | nasdaq_fetcher | INFO     | fetch_and_save_stock_data:101 | ✅ AAPL: 成功保存 394 条数据
+2025-07-30 14:08:53 | nasdaq_fetcher | INFO     | fetch_and_save_stock_data:102 |    📅 2024-01-02 到 2025-07-29
+2025-07-30 14:08:53 | nasdaq_fetcher | INFO     | fetch_and_save_stock_data:103 |    📈 总收益: +14.6%
+2025-07-30 14:08:53 | nasdaq_fetcher | INFO     | fetch_and_save_stock_data:104 |    ⏱️  用时: 6.0秒
+2025-07-30 14:08:56 | nasdaq_fetcher | INFO     | fetch_and_save_stock_data:78 | 开始获取 MSFT 历史数据...
+2025-07-30 14:08:56 | nasdaq_fetcher | INFO     | stock_start:94 | 🔄 开始获取 MSFT 历史数据 (从 2024-01-01)
+2025-07-30 14:08:56 | nasdaq_fetcher | INFO     | system_info:145 | 🔧 将请求 2 Y 的数据后进行筛选
+2025-07-30 14:08:56 | nasdaq_fetcher | INFO     | get_stock_data:111 | 正在连接到IBKR TWS...
+2025-07-30 14:08:59 | nasdaq_fetcher | INFO     | get_stock_data:128 | 请求数据: 持续时间=2 Y
+2025-07-30 14:09:00 | nasdaq_fetcher | ERROR    | api_failure:120 | 🚫 API调用失败: IBKR API - 错误码 2176: 警告: 您的API版本不支持小数股交易数量。请至少升级到版本163。已将144107.22调整为144107
+2025-07-30 14:09:00 | nasdaq_fetcher | INFO     | historicalDataEnd:52 | 历史数据接收完成! 共接收 501 条数据
+2025-07-30 14:09:00 | nasdaq_fetcher | INFO     | system_info:145 | 🔧 成功获取 501 条原始数据
+2025-07-30 14:09:00 | nasdaq_fetcher | INFO     | stock_success:99 | ✅ MSFT: 成功获取 394 条数据
+2025-07-30 14:09:00 | nasdaq_fetcher | INFO     | data_summary:150 | 📄 MSFT 数据摘要:
+2025-07-30 14:09:00 | nasdaq_fetcher | INFO     | data_summary:151 |   📅 时间范围: 2024-01-02 到 2025-07-29
+2025-07-30 14:09:00 | nasdaq_fetcher | INFO     | data_summary:152 |   📊 数据条数: 394
+2025-07-30 14:09:00 | nasdaq_fetcher | INFO     | data_summary:153 |   💾 文件大小: 0.0 KB
+2025-07-30 14:09:02 | nasdaq_fetcher | INFO     | fetch_and_save_stock_data:101 | ✅ MSFT: 成功保存 394 条数据
+2025-07-30 14:09:02 | nasdaq_fetcher | INFO     | fetch_and_save_stock_data:102 |    📅 2024-01-02 到 2025-07-29
+2025-07-30 14:09:02 | nasdaq_fetcher | INFO     | fetch_and_save_stock_data:103 |    📈 总收益: +39.8%
+2025-07-30 14:09:02 | nasdaq_fetcher | INFO     | fetch_and_save_stock_data:104 |    ⏱️  用时: 6.1秒
+2025-07-30 14:09:05 | nasdaq_fetcher | INFO     | fetch_and_save_stock_data:78 | 开始获取 GOOGL 历史数据...
+2025-07-30 14:09:05 | nasdaq_fetcher | INFO     | stock_start:94 | 🔄 开始获取 GOOGL 历史数据 (从 2024-01-01)
+2025-07-30 14:09:05 | nasdaq_fetcher | INFO     | system_info:145 | 🔧 将请求 2 Y 的数据后进行筛选
+2025-07-30 14:09:05 | nasdaq_fetcher | INFO     | get_stock_data:111 | 正在连接到IBKR TWS...
+2025-07-30 14:09:08 | nasdaq_fetcher | INFO     | get_stock_data:128 | 请求数据: 持续时间=2 Y
+2025-07-30 14:09:09 | nasdaq_fetcher | ERROR    | api_failure:120 | 🚫 API调用失败: IBKR API - 错误码 2176: 警告: 您的API版本不支持小数股交易数量。请至少升级到版本163。已将182263.29调整为182263
+2025-07-30 14:09:09 | nasdaq_fetcher | INFO     | historicalDataEnd:52 | 历史数据接收完成! 共接收 501 条数据
+2025-07-30 14:09:09 | nasdaq_fetcher | INFO     | system_info:145 | 🔧 成功获取 501 条原始数据
+2025-07-30 14:09:09 | nasdaq_fetcher | INFO     | stock_success:99 | ✅ GOOGL: 成功获取 394 条数据
+2025-07-30 14:09:09 | nasdaq_fetcher | INFO     | data_summary:150 | 📄 GOOGL 数据摘要:
+2025-07-30 14:09:09 | nasdaq_fetcher | INFO     | data_summary:151 |   📅 时间范围: 2024-01-02 到 2025-07-29
+2025-07-30 14:09:09 | nasdaq_fetcher | INFO     | data_summary:152 |   📊 数据条数: 394
+2025-07-30 14:09:09 | nasdaq_fetcher | INFO     | data_summary:153 |   💾 文件大小: 0.0 KB
+2025-07-30 14:09:11 | nasdaq_fetcher | INFO     | fetch_and_save_stock_data:101 | ✅ GOOGL: 成功保存 394 条数据
+2025-07-30 14:09:11 | nasdaq_fetcher | INFO     | fetch_and_save_stock_data:102 |    📅 2024-01-02 到 2025-07-29
+2025-07-30 14:09:11 | nasdaq_fetcher | INFO     | fetch_and_save_stock_data:103 |    📈 总收益: +42.5%
+2025-07-30 14:09:11 | nasdaq_fetcher | INFO     | fetch_and_save_stock_data:104 |    ⏱️  用时: 6.1秒
+2025-07-30 14:09:14 | nasdaq_fetcher | INFO     | fetch_and_save_stock_data:78 | 开始获取 TSLA 历史数据...
+2025-07-30 14:09:14 | nasdaq_fetcher | INFO     | stock_start:94 | 🔄 开始获取 TSLA 历史数据 (从 2024-01-01)
+2025-07-30 14:09:14 | nasdaq_fetcher | INFO     | system_info:145 | 🔧 将请求 2 Y 的数据后进行筛选
+2025-07-30 14:09:14 | nasdaq_fetcher | INFO     | get_stock_data:111 | 正在连接到IBKR TWS...
+2025-07-30 14:09:17 | nasdaq_fetcher | INFO     | get_stock_data:128 | 请求数据: 持续时间=2 Y
+2025-07-30 14:09:18 | nasdaq_fetcher | ERROR    | api_failure:120 | 🚫 API调用失败: IBKR API - 错误码 2176: 警告: 您的API版本不支持小数股交易数量。请至少升级到版本163。已将688000.62调整为688000
+2025-07-30 14:09:18 | nasdaq_fetcher | INFO     | historicalDataEnd:52 | 历史数据接收完成! 共接收 501 条数据
+2025-07-30 14:09:18 | nasdaq_fetcher | INFO     | system_info:145 | 🔧 成功获取 501 条原始数据
+2025-07-30 14:09:18 | nasdaq_fetcher | INFO     | stock_success:99 | ✅ TSLA: 成功获取 394 条数据
+2025-07-30 14:09:18 | nasdaq_fetcher | INFO     | data_summary:150 | 📄 TSLA 数据摘要:
+2025-07-30 14:09:18 | nasdaq_fetcher | INFO     | data_summary:151 |   📅 时间范围: 2024-01-02 到 2025-07-29
+2025-07-30 14:09:18 | nasdaq_fetcher | INFO     | data_summary:152 |   📊 数据条数: 394
+2025-07-30 14:09:18 | nasdaq_fetcher | INFO     | data_summary:153 |   💾 文件大小: 0.0 KB
+2025-07-30 14:09:20 | nasdaq_fetcher | INFO     | fetch_and_save_stock_data:101 | ✅ TSLA: 成功保存 394 条数据
+2025-07-30 14:09:20 | nasdaq_fetcher | INFO     | fetch_and_save_stock_data:102 |    📅 2024-01-02 到 2025-07-29
+2025-07-30 14:09:20 | nasdaq_fetcher | INFO     | fetch_and_save_stock_data:103 |    📈 总收益: +29.3%
+2025-07-30 14:09:20 | nasdaq_fetcher | INFO     | fetch_and_save_stock_data:104 |    ⏱️  用时: 6.0秒
+2025-07-30 14:09:23 | nasdaq_fetcher | INFO     | fetch_and_save_stock_data:78 | 开始获取 NVDA 历史数据...
+2025-07-30 14:09:23 | nasdaq_fetcher | INFO     | stock_start:94 | 🔄 开始获取 NVDA 历史数据 (从 2024-01-01)
+2025-07-30 14:09:23 | nasdaq_fetcher | INFO     | system_info:145 | 🔧 将请求 2 Y 的数据后进行筛选
+2025-07-30 14:09:23 | nasdaq_fetcher | INFO     | get_stock_data:111 | 正在连接到IBKR TWS...
+2025-07-30 14:09:26 | nasdaq_fetcher | INFO     | get_stock_data:128 | 请求数据: 持续时间=2 Y
+2025-07-30 14:09:27 | nasdaq_fetcher | ERROR    | api_failure:120 | 🚫 API调用失败: IBKR API - 错误码 2176: 警告: 您的API版本不支持小数股交易数量。请至少升级到版本163。已将1663020.5调整为1663020
+2025-07-30 14:09:27 | nasdaq_fetcher | INFO     | historicalDataEnd:52 | 历史数据接收完成! 共接收 501 条数据
+2025-07-30 14:09:27 | nasdaq_fetcher | INFO     | system_info:145 | 🔧 成功获取 501 条原始数据
+2025-07-30 14:09:27 | nasdaq_fetcher | INFO     | stock_success:99 | ✅ NVDA: 成功获取 394 条数据
+2025-07-30 14:09:27 | nasdaq_fetcher | INFO     | data_summary:150 | 📄 NVDA 数据摘要:
+2025-07-30 14:09:27 | nasdaq_fetcher | INFO     | data_summary:151 |   📅 时间范围: 2024-01-02 到 2025-07-29
+2025-07-30 14:09:27 | nasdaq_fetcher | INFO     | data_summary:152 |   📊 数据条数: 394
+2025-07-30 14:09:27 | nasdaq_fetcher | INFO     | data_summary:153 |   💾 文件大小: 0.0 KB
+2025-07-30 14:09:29 | nasdaq_fetcher | INFO     | fetch_and_save_stock_data:101 | ✅ NVDA: 成功保存 394 条数据
+2025-07-30 14:09:29 | nasdaq_fetcher | INFO     | fetch_and_save_stock_data:102 |    📅 2024-01-02 到 2025-07-29
+2025-07-30 14:09:29 | nasdaq_fetcher | INFO     | fetch_and_save_stock_data:103 |    📈 总收益: +264.5%
+2025-07-30 14:09:29 | nasdaq_fetcher | INFO     | fetch_and_save_stock_data:104 |    ⏱️  用时: 6.0秒
+2025-07-30 14:09:32 | nasdaq_fetcher | INFO     | fetch_and_save_stock_data:78 | 开始获取 META 历史数据...
+2025-07-30 14:09:32 | nasdaq_fetcher | INFO     | stock_start:94 | 🔄 开始获取 META 历史数据 (从 2024-01-01)
+2025-07-30 14:09:32 | nasdaq_fetcher | INFO     | system_info:145 | 🔧 将请求 2 Y 的数据后进行筛选
+2025-07-30 14:09:32 | nasdaq_fetcher | INFO     | get_stock_data:111 | 正在连接到IBKR TWS...
+2025-07-30 14:09:35 | nasdaq_fetcher | INFO     | get_stock_data:128 | 请求数据: 持续时间=2 Y
+2025-07-30 14:09:36 | nasdaq_fetcher | ERROR    | api_failure:120 | 🚫 API调用失败: IBKR API - 错误码 2176: 警告: 您的API版本不支持小数股交易数量。请至少升级到版本163。已将163841.03调整为163841
+2025-07-30 14:09:36 | nasdaq_fetcher | INFO     | historicalDataEnd:52 | 历史数据接收完成! 共接收 501 条数据
+2025-07-30 14:09:36 | nasdaq_fetcher | INFO     | system_info:145 | 🔧 成功获取 501 条原始数据
+2025-07-30 14:09:36 | nasdaq_fetcher | INFO     | stock_success:99 | ✅ META: 成功获取 394 条数据
+2025-07-30 14:09:36 | nasdaq_fetcher | INFO     | data_summary:150 | 📄 META 数据摘要:
+2025-07-30 14:09:36 | nasdaq_fetcher | INFO     | data_summary:151 |   📅 时间范围: 2024-01-02 到 2025-07-29
+2025-07-30 14:09:36 | nasdaq_fetcher | INFO     | data_summary:152 |   📊 数据条数: 394
+2025-07-30 14:09:36 | nasdaq_fetcher | INFO     | data_summary:153 |   💾 文件大小: 0.0 KB
+2025-07-30 14:09:38 | nasdaq_fetcher | INFO     | fetch_and_save_stock_data:101 | ✅ META: 成功保存 394 条数据
+2025-07-30 14:09:38 | nasdaq_fetcher | INFO     | fetch_and_save_stock_data:102 |    📅 2024-01-02 到 2025-07-29
+2025-07-30 14:09:38 | nasdaq_fetcher | INFO     | fetch_and_save_stock_data:103 |    📈 总收益: +103.3%
+2025-07-30 14:09:38 | nasdaq_fetcher | INFO     | fetch_and_save_stock_data:104 |    ⏱️  用时: 6.1秒
