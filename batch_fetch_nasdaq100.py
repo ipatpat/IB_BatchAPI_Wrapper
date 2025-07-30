@@ -13,12 +13,11 @@ import os
 import time
 import argparse
 from datetime import datetime
-import logging
 from src.ibkr_fetcher import get_stock_data
+from src.logger_config import get_logger
 
-# 设置日志
-logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
-logger = logging.getLogger(__name__)
+# 获取轻量级logger
+logger = get_logger("nasdaq_batch")
 
 def parse_arguments():
     """解析命令行参数"""

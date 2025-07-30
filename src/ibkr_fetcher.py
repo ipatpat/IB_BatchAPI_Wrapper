@@ -6,18 +6,10 @@ import threading
 import time
 import pandas as pd
 from datetime import datetime, timedelta
-import logging
-import os
-import sys
+from .logger_config import get_logger
 
-# 添加项目根目录到Python路径
-project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-sys.path.insert(0, project_root)
-
-from utils.logger_config import get_logger, log_exception
-
-# 使用新的logging系统
-logger = get_logger('nasdaq_fetcher')
+# 获取轻量级logger
+logger = get_logger("nasdaq_fetcher")
 
 class StockDataFetcher(EWrapper, EClient):
     def __init__(self):
@@ -31,17 +23,9 @@ class StockDataFetcher(EWrapper, EClient):
     def error(self, reqId, errorCode, errorString, advancedOrderRejectJson=""):
         # 这些是正常的连接信息，不是错误
         if errorCode in [2104, 2106, 2158, 2174]:
-            logger.connection_event("info", f"代码{errorCode}: {errorString}")
+            logger.system_info(f"IBKR连接信息 {errorCode}: {errorString}")
         else:
-            # 记录详细的错误信息到失败日志
-            error_context = {
-                'reqId': reqId,
-                'errorCode': errorCode,
-                'errorString': errorString,
-                'advancedOrderRejectJson': advancedOrderRejectJson
-            }
-            logger.api_call("IBKR_API_ERROR", error_context, success=False, error_msg=errorString)
-            
+            logger.api_failure("IBKR API", errorCode, errorString)
             self.error_message = f"错误 {errorCode}: {errorString}"
             if errorCode in [200, 162, 321, 10314]:  # 严重错误
                 self.error_occurred = True
@@ -63,7 +47,7 @@ class StockDataFetcher(EWrapper, EClient):
         self.historical_data.append(data_row)
         
     def historicalDataEnd(self, reqId: int, start: str, end: str):
-        logger.info(f"📊 历史数据接收完成! 共接收 {self.data_count} 条数据")
+        logger.info(f"历史数据接收完成! 共接收 {self.data_count} 条数据")
         self.data_received = True
 
 def create_stock_contract(symbol):
@@ -92,9 +76,6 @@ def get_stock_data(symbol, start_date=None, host="127.0.0.1", port=7496, client_
     pandas.DataFrame: 包含股票历史数据的 DataFrame
     """
     
-    # 记录开始时间用于计算总耗时
-    start_time = time.time()
-    
     # 处理开始日期参数
     if start_date is None:
         # 默认获取3年数据
@@ -115,15 +96,16 @@ def get_stock_data(symbol, start_date=None, host="127.0.0.1", port=7496, client_
         
         logger.debug(f"计算时间跨度: 从 {filter_start_date.strftime('%Y-%m-%d')} 到现在 = {(datetime.now() - filter_start_date).days} 天 = {years_needed} 年")
     
-    # 记录开始获取股票数据
-    logger.stock_start(symbol, filter_start_date.strftime('%Y-%m-%d'), f"请求{duration_str}数据")
+    # 使用新的日志方法
+    logger.stock_start(symbol, filter_start_date.strftime('%Y-%m-%d'))
+    logger.system_info(f"将请求 {duration_str} 的数据后进行筛选")
     
     # 创建客户端实例
     app = StockDataFetcher()
     
     try:
         # 连接到TWS
-        logger.connection_event("connect", f"尝试连接{host}:{port}")
+        logger.info("正在连接到IBKR TWS...")
         app.connect(host, port, client_id)
         
         # 在单独的线程中运行消息循环
@@ -134,22 +116,13 @@ def get_stock_data(symbol, start_date=None, host="127.0.0.1", port=7496, client_
         time.sleep(3)
         
         if not app.isConnected():
-            logger.connection_event("connect", f"连接{host}:{port}失败", success=False)
+            logger.connection_failure(host, port, "无法建立连接")
             return pd.DataFrame()
-        
-        logger.connection_event("connect", f"已连接{host}:{port}")
         
         # 创建股票合约
         contract = create_stock_contract(symbol)
         
-        # 记录API调用
-        api_params = {
-            'symbol': symbol,
-            'duration': duration_str,
-            'barSize': '1 day',
-            'whatToShow': 'ADJUSTED_LAST'
-        }
-        logger.api_call("reqHistoricalData", api_params)
+        logger.info(f"请求数据: 持续时间={duration_str}")
         
         # 请求历史数据
         chart_options = []
@@ -173,18 +146,14 @@ def get_stock_data(symbol, start_date=None, host="127.0.0.1", port=7496, client_
             time.sleep(0.5)
         
         if app.error_occurred:
-            logger.stock_failure(symbol, app.error_message, additional_context={
-                'host': host, 'port': port, 'client_id': client_id, 'duration': duration_str
-            })
+            logger.stock_failure(symbol, app.error_message)
             return pd.DataFrame()
         
         if not app.data_received:
-            logger.stock_failure(symbol, "获取数据超时", additional_context={
-                'timeout': timeout, 'host': host, 'port': port
-            })
+            logger.stock_failure(symbol, "获取数据超时")
             return pd.DataFrame()
         
-        logger.debug(f"成功获取 {len(app.historical_data)} 条原始数据")
+        logger.system_info(f"成功获取 {len(app.historical_data)} 条原始数据")
         
         # 转换为 DataFrame
         if app.historical_data:
@@ -196,39 +165,22 @@ def get_stock_data(symbol, start_date=None, host="127.0.0.1", port=7496, client_
             # 按开始日期筛选数据
             df_filtered = df[df.index >= filter_start_date]
             
-            if len(df_filtered) > 0:
-                # 计算处理时间
-                end_time = time.time()
-                elapsed = end_time - start_time
-                
-                # 记录成功
-                logger.stock_success(
-                    symbol, 
-                    len(df_filtered), 
-                    elapsed,
-                    df_filtered.index.min().strftime('%Y-%m-%d'),
-                    df_filtered.index.max().strftime('%Y-%m-%d')
-                )
-                return df_filtered
-            else:
-                logger.data_quality_issue(symbol, "筛选后无数据", "error")
-                return pd.DataFrame()
+            # 计算时间跨度和文件信息
+            start_date = df_filtered.index.min().strftime('%Y-%m-%d')
+            end_date = df_filtered.index.max().strftime('%Y-%m-%d')
+            
+            logger.stock_success(symbol, len(df_filtered))
+            logger.data_summary(symbol, start_date, end_date, len(df_filtered), 0)  # 文件大小稍后计算
+            return df_filtered
         else:
-            logger.data_quality_issue(symbol, "API返回空数据", "error")
             return pd.DataFrame()
             
     except Exception as e:
-        # 使用专用的异常记录函数
-        log_exception(logger, f"获取{symbol}数据时发生异常")
-        logger.stock_failure(symbol, str(e), additional_context={
-            'exception_type': type(e).__name__,
-            'host': host, 'port': port
-        })
+        logger.stock_failure(symbol, f"系统异常: {str(e)}", e)
         return pd.DataFrame()
     finally:
         # 断开连接
         if app.isConnected():
-            logger.connection_event("disconnect", f"断开{host}:{port}")
             app.disconnect()
             time.sleep(2)
 
@@ -246,33 +198,32 @@ def get_multiple_stocks_data(symbols, start_date=None, host="127.0.0.1", port=74
     dict: 以股票代码为键，DataFrame 为值的字典
     """
     results = {}
-    batch_start_time = time.time()
-    
-    # 记录批量处理开始
-    logger.batch_start(len(symbols), "多股票数据获取")
-    
+    total_symbols = len(symbols)
     success_count = 0
+    start_time = time.time()
+    
+    logger.batch_start(total_symbols, "多股票数据获取")
+    
     for i, symbol in enumerate(symbols, 1):
-        logger.batch_progress(i, len(symbols), symbol)
+        logger.batch_progress(i, total_symbols, symbol)
         
         try:
             df = get_stock_data(symbol, start_date, host, port)
             if not df.empty:
                 results[symbol] = df
                 success_count += 1
-                logger.debug(f"{symbol} 数据获取成功")
             else:
-                logger.warning(f"{symbol} 数据获取失败 - 返回空DataFrame")
+                logger.stock_failure(symbol, "返回空数据")
         except Exception as e:
-            log_exception(logger, f"获取{symbol}数据时发生异常")
-            logger.stock_failure(symbol, str(e), additional_context={
-                'batch_processing': True,
-                'position_in_batch': i,
-                'total_in_batch': len(symbols)
-            })
+            logger.stock_failure(symbol, f"批量获取异常: {str(e)}", e)
         
         # 在每个股票之间稍作延迟，避免请求过于频繁
         time.sleep(2)
+    
+    # 记录批量处理摘要
+    elapsed_time = time.time() - start_time
+    failed_count = total_symbols - success_count
+    logger.batch_summary(total_symbols, success_count, failed_count, elapsed_time)
     
     return results
 
