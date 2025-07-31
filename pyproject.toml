@@ -1,5 +1,5 @@
 [project]
-name = "tushare-data"
+name = "IBKR_StockAPI_Wrapper"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
