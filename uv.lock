@@ -3,6 +3,18 @@ revision = 3
 requires-python = ">=3.13"
 
 [[package]]
+name = "aeventkit"
+version = "2.1.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "numpy" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/5c/8c/c08db1a1910f8d04ec6a524de522edd0bac181bdf94dbb01183f7685cd77/aeventkit-2.1.0.tar.gz", hash = "sha256:4e7d81bb0a67227121da50a23e19e5bbf13eded541a9f4857eeb6b7b857b738a", size = 24703, upload-time = "2025-06-22T15:54:03.961Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/8d/8c/2a4b912b1afa201b25bdd0f5bccf96d5a8b5dccb6131316a8dd2d9cabcc1/aeventkit-2.1.0-py3-none-any.whl", hash = "sha256:962d43f79e731ac43527f2d0defeed118e6dbaa85f1487f5667540ebb8f00729", size = 26678, upload-time = "2025-06-22T15:54:02.141Z" },
+]
+
+[[package]]
 name = "aiohappyeyeballs"
 version = "2.6.1"
 source = { registry = "https://pypi.org/simple" }
@@ -231,6 +243,19 @@ wheels = [
 ]
 
 [[package]]
+name = "ib-async"
+version = "2.0.1"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "aeventkit" },
+    { name = "nest-asyncio" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/3b/05/daa22cdd2b452c95d051dc038c2eedd7377d2e3763abbeb414c197f6034c/ib_async-2.0.1.tar.gz", hash = "sha256:331c915645f49b46fdf42c9f06bbd56d264cab0cd24535eca2476f5d212ab113", size = 86669, upload-time = "2025-06-22T16:07:33.31Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/b6/d5/310c3642f6008b43d751811d09302c8abf490f2086ff16f280f030a2bd24/ib_async-2.0.1-py3-none-any.whl", hash = "sha256:4c0794264844a441b4ece468dda8550663eab38009b258e49c748900c6f79822", size = 86800, upload-time = "2025-06-22T16:07:31.39Z" },
+]
+
+[[package]]
 name = "ibapi"
 version = "9.81.1.post1"
 source = { registry = "https://pypi.org/simple" }
@@ -242,6 +267,7 @@ version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
     { name = "akshare" },
+    { name = "ib-async" },
     { name = "ibapi" },
     { name = "numpy" },
     { name = "pandas" },
@@ -250,6 +276,7 @@ dependencies = [
 [package.metadata]
 requires-dist = [
     { name = "akshare", specifier = ">=1.17.26" },
+    { name = "ib-async", specifier = ">=2.0.1" },
     { name = "ibapi", specifier = ">=9.81.1.post1" },
     { name = "numpy", specifier = ">=2.3.2" },
     { name = "pandas", specifier = ">=2.3.1" },

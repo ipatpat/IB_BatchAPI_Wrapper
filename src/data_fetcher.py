@@ -21,10 +21,10 @@ from ibapi.wrapper import EWrapper
 from ibapi.contract import Contract
 from ibapi.common import BarData
 from .logger_config import get_logger
-
+# TODO: Change Backend to ib_async when ready
 
 # ================================
-# 0. 时间框架配置管理 (SRP - 单一职责原则)
+# 0. 时间框架配置管理
 # ================================
 
 class BarSizeConfig:
@@ -156,7 +156,7 @@ class BarSizeValidator:
 
 
 # ================================
-# 1. 抽象接口 (ISP - 接口隔离原则)
+# 1. 抽象接口
 # ================================
 
 class IDataFetcher(ABC):
@@ -196,32 +196,8 @@ class IDateProcessor(ABC):
 
 
 # ================================
-# 2. 数据传输对象 (DTO)
+# 2. 数据传输对象 
 # ================================
-
-class SecurityConfig:
-    """证券配置数据传输对象"""
-    
-    def __init__(self, symbol: str, sec_type: str, exchange: str, 
-                 primary_exchange: Optional[str] = None, currency: str = "USD"):
-        self.symbol = symbol
-        self.sec_type = sec_type
-        self.exchange = exchange
-        self.primary_exchange = primary_exchange
-        self.currency = currency
-
-
-class FetchRequest:
-    """获取请求数据传输对象"""
-    
-    def __init__(self, symbol: str, start_date: str, 
-                 host: str = "127.0.0.1", port: int = 7496, client_id: int = 0):
-        self.symbol = symbol
-        self.start_date = start_date
-        self.host = host
-        self.port = port
-        self.client_id = client_id
-
 
 class FetchResult:
     """获取结果数据传输对象"""
@@ -236,7 +212,7 @@ class FetchResult:
 
 
 # ================================
-# 3. 策略模式实现 (OCP - 开闭原则)
+# 3. 策略模式实现 
 # ================================
 
 class StockExchangeStrategy(IExchangeStrategy):
@@ -270,7 +246,7 @@ class IndexExchangeStrategy(IExchangeStrategy):
 
 
 # ================================
-# 4. 工厂模式实现 (SRP - 单一职责原则)
+# 4. 工厂模式实现 
 # ================================
 
 class StockContractFactory(IContractFactory):
@@ -295,25 +271,6 @@ class IndexContractFactory(IContractFactory):
         contract.secType = "IND"
         contract.exchange = "SMART"  # 默认，会被策略覆盖
         contract.currency = "USD"
-        return contract
-
-
-class ConfigurableContractFactory(IContractFactory):
-    """可配置合约工厂"""
-    
-    def __init__(self, config: SecurityConfig):
-        self.config = config
-    
-    def create_contract(self, symbol: str) -> Contract:
-        contract = Contract()
-        contract.symbol = symbol
-        contract.secType = self.config.sec_type
-        contract.exchange = self.config.exchange
-        contract.currency = self.config.currency
-        
-        if self.config.primary_exchange:
-            contract.primaryExchange = self.config.primary_exchange
-            
         return contract
 
 
@@ -385,7 +342,7 @@ class IBKRApiClient(EWrapper, EClient):
 
 
 # ================================
-# 6. 核心数据获取器 (DIP - 依赖倒置原则)
+# 6. 核心数据获取器 
 # ================================
 
 class BaseFetcher(IDataFetcher):
@@ -401,7 +358,7 @@ class BaseFetcher(IDataFetcher):
         self.logger = get_logger()
     
     def fetch_data(self, symbol: str, start_date: str, 
-                   host: str = "127.0.0.1", port: int = 7496, 
+                   host: str = "127.0.0.1", port: int = 4002, 
                    client_id: int = 0, bar_size: Optional[str] = None) -> FetchResult:
         """获取数据的模板方法"""
         try:
@@ -517,7 +474,7 @@ class BaseFetcher(IDataFetcher):
 
 
 # ================================
-# 7. 具体实现类 (LSP - 里氏替换原则)
+# 7. 具体实现类 
 # ================================
 
 class StockDataFetcher(BaseFetcher):
