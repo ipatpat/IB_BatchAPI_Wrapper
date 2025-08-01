@@ -1,4 +1,4 @@
-# TUSHARE_DATA - NASDAQ 100 股票和指数数据获取工具
+# IB_BatchAPI_Wrapper - NASDAQ 100 股票和指数数据获取工具
 
 这是一个基于 Interactive Brokers (IBKR) TWS API 的股票和指数历史数据获取工具，专门优化用于批量获取 NASDAQ 100 股票后复权数据和各种市场指数。
 数据支持导入**Qlib与RD-AGENT**进行量化研究。
